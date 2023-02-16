@@ -1,0 +1,16 @@
+<div class="tags-container" [formGroup]="tagsForm">
+    <div class="input-area">
+        <input type="text" formControlName="name">
+        <button type="button" class="add-button" (click)="addTag()">
+            <img src="../../../../../assets/plus-svgrepo-com.svg" alt="+">
+        </button>
+
+    </div>
+    <div class="tags-area">
+        <ul class="tags-list">
+            <li class="tags-list__item" *ngFor="let tag of tags; index as i">{{i}}-{{tag}}<span (click)="removeTag(i)"> X</span></li>
+        </ul>
+
+    </div>
+
+</div>

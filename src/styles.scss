@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+@import 'reset-css';
+html {
+    /* 10px */
+    font-size: 62.5%;
+  }
+  
+  body {
+    /* 16px */
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(9deg, rgba(4, 4, 54, 0.527) 30%,rgba(151, 143, 143, 0.39) 30%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }

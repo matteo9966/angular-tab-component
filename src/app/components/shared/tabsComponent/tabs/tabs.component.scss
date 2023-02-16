@@ -1,0 +1,32 @@
+.tabs-container{
+    display: grid;
+    grid-template-rows:min-content 1fr;
+
+}
+.tabs-titles{
+    display: flex;
+    flex-direction: row;
+    
+    &__title{
+        display: inline-block;
+        padding: 1rem;
+        border-bottom: none;
+        width: 10ch;
+        min-width: 10ch;
+        border-radius: 5px 5px 0 0;
+        border:1px solid gray;
+        border-bottom: none;
+        &--active{
+            box-shadow: inset 0 2px 9px rgb(0 0 0 / 16%);
+            color:blue;
+            font-weight: bold;
+        }
+
+        &--not-active{
+            // box-shadow: none;
+            background-color: rgba(128, 128, 128, 0.205);
+            color:lighten($color: #313131, $amount: 30%);
+        }
+        
+    }
+}

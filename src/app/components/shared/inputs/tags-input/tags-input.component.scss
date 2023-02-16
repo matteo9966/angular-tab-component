@@ -1,0 +1,59 @@
+@use '../../../../styles/sass-utils/mixins' as m;
+
+:host{
+    width: inherit;
+    max-width: inherit;
+}
+
+.tags-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: inherit;
+    max-width: inherit;
+
+    .input-area{
+        display: flex;
+        gap:1rem;
+        
+    }
+
+
+}
+
+.add-button{
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background: none;
+    background-color: none;
+    img{
+        width: 3rem;
+        height: 3rem;
+        @include m.cc;
+    }
+}
+
+.tags-area{
+    padding: 0.3rem;      
+    display: flex;
+    flex-wrap: wrap;
+    width: inherit;
+max-width: inherit;
+
+    .tags-list{
+        width: inherit;
+        max-width: inherit;
+        display: flex;
+        gap: 1ch;
+        flex-wrap: wrap;
+
+        &__item{
+            padding: 0.5rem;
+            font-weight: 500;
+            border-radius: 1em;
+            border:1px solid;
+        }
+    }
+}

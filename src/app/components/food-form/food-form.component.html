@@ -1,0 +1,106 @@
+<form [formGroup]="foodForm" class="food-form" (ngSubmit)="submitFood()">
+  <app-tabs>
+    <app-tab tabTitle="Details" formGroupName="details">
+      <div class="controls-group">
+        <div class="control-container">
+          <label for="food-name">Name</label>
+          <input
+            type="text"
+            placeholder="Name"
+            formControlName="name"
+            id="food-name"
+          />
+        </div>
+        <div class="control-container">
+          <label for="food-qnt">Quantity</label>
+          <input
+            type="number"
+            placeholder="Quantity"
+            formControlName="quantity"
+            id="food-qnt"
+          />
+        </div>
+
+        <div class="control-container">
+          <label for="food-expires">Expires</label>
+          <input
+            type="date"
+            placeholder="Expires"
+            formControlName="expires"
+            id="food-expires"
+          />
+        </div>
+      </div>
+      
+    </app-tab>
+    <app-tab tabTitle="Macros" formGroupName="macros">
+      <div class="controls-group">
+        <div class="control-container">
+          <label for="food-calories">Calories </label>
+          <input
+            type="number"
+            placeholder="Calories"
+            formControlName="calories"
+            id="food-calories"
+          />
+        </div>
+        <div class="control-container">
+          <label for="food-fats">Fats ({{units$|async}})</label>
+          <input
+            type="number"
+            placeholder="Fats"
+            formControlName="fats"
+            id="food-fats"
+          />
+        </div>
+        <div class="control-container">
+          <label for="food-protein">Protein ({{units$|async}})</label>
+          <input
+            type="number"
+            placeholder="Protein"
+            formControlName="proteins"
+            id="food-protein"
+          />
+        </div>
+        <div class="control-container">
+          <label for="food-carbohydrates">Carbohydrates ({{units$|async}})</label>
+          <input
+            type="number"
+            placeholder="carbohydrates"
+            formControlName="carbs"
+            id="food-carbohydrates"
+          />
+        </div>
+        <div class="control-container">
+          <label for="g">g/100g</label>
+          <input type="radio" name="unit" id="g" value="g/100g" formControlName="unit">
+          <label for="l">g/l</label>
+          <input type="radio" name="unit" id="l" value="g/l" formControlName="unit">
+        </div>
+       
+      </div>
+    </app-tab>
+    <app-tab tabTitle="Extra info" formGroupName="extraInfo">
+      <div class="controls-group">
+        <div class="control-container description-area">
+          <label for="food-calories">Description</label>
+        
+          <textarea  placeholder="Description"
+          formControlName="description"
+          id="food-description" cols="30" rows="10"></textarea>
+
+        </div>
+        <div class="control-container">
+          <label for="food-tags">Tags</label>
+          <app-tags-input formControlName="tags"></app-tags-input>
+        </div>
+       
+      </div>
+      
+    </app-tab>
+  </app-tabs>
+  <div class="button-area">
+    <button type="submit">Add Food</button>
+  </div>
+
+</form>

@@ -1,0 +1,16 @@
+.card {
+    margin: auto;
+    padding: 2em;
+    border-radius: 1em;
+    border: 1px solid transparentize(white, 0.5);
+    text-shadow: 0 0 1em transparentize(black, 0.5);
+    background: transparentize(white, 0.8);
+    backdrop-filter: blur(20px);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: fit-content;
+  }
+
+
+
