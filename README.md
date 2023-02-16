@@ -1,4 +1,5 @@
-# FirefoxVsChrome
+# Angular tab component
+A tab component and a custom form input
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
